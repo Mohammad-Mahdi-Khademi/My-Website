@@ -48,7 +48,7 @@
   const ctx = canvas.getContext('2d');
   let DPR = Math.max(1, window.devicePixelRatio || 1);
 
-  const cfg = { count: 100, maxRadius: 2.6, connectionDist: 120, speed: 0.35 };
+  const cfg = { count: 200, maxRadius: 2.6, connectionDist: 120, speed: 0.35 };
   let particles = [];
   let mouse = { x: null, y: null, lastMove: 0 };
   let theme = getTheme(); // current palette
