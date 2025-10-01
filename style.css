@@ -9,6 +9,7 @@
   --max-width: 1100px;
   --ease: cubic-bezier(.2,.9,.3,1);
 }
+
 *{box-sizing:border-box}
 html,body{height:100%}
 body{
@@ -36,7 +37,7 @@ body{
   top:0;
   z-index:6;
 }
-.header-inner{ display:flex; gap:16px; align-items:center; justify-content:space-between; }
+.header-inner{ display:flex; gap:16px; align-items:center; justify-content:space-between; flex-wrap:wrap; }
 
 /* Profile */
 .profile{ display:flex; gap:16px; align-items:center; }
@@ -48,6 +49,7 @@ body{
 .meta span{ opacity:0.5; margin:0 8px; }
 
 /* Nav */
+.top-nav{ display:flex; flex-wrap:wrap; align-items:center }
 .top-nav a{ color:var(--muted); text-decoration:none; margin-left:14px; font-weight:600; font-size:0.95rem; transition: color 220ms var(--ease); }
 .top-nav a:hover{ color:#E8ECE6 }
 
@@ -69,9 +71,10 @@ body{
 
 /* CTA & buttons */
 .cta-row{ margin-top:12px; display:flex; gap:12px; flex-wrap:wrap }
-.btn{ display:inline-flex; align-items:center; gap:10px; padding:10px 14px; border-radius:10px; text-decoration:none; color:#0A0F0C; background:var(--accent); font-weight:700; transform:translateY(0); transition: transform 220ms var(--ease), box-shadow 220ms var(--ease); box-shadow: 0 8px 20px rgba(10, 15, 12, 0.6); }
+.btn{ display:inline-flex; align-items:center; gap:10px; padding:10px 14px; border-radius:10px; text-decoration:none; color:#0A0F0C; background:var(--accent); font-weight:700; transform:translateY(0); transition: transform 220ms var(--ease), box-shadow 220ms var(--ease); box-shadow: 0 8px 20px rgba(10, 15, 12, 0.6); cursor:pointer; }
 .btn:hover{ transform:translateY(-4px) }
 .btn.ghost{ background:transparent; color:var(--muted); border:1px solid rgba(42, 79, 43, 0.15); }
+.btn.small { font-size: 0.82rem; padding: 6px 10px; }
 
 /* Footer */
 .site-footer{ padding:24px 0 64px; color:var(--muted) }
@@ -101,3 +104,44 @@ a:focus, button:focus { outline: 3px solid rgba(118, 185, 0, 0.2); outline-offse
 
 /* Misc */
 .muted{ color:var(--muted); font-size:0.9rem; }
+
+/* =========================
+   Light Mode Overrides
+   ========================= */
+body.light-mode {
+  --bg: #F8FAF9;
+  --card: #ffffffdd;
+  --glass: rgba(200, 230, 200, 0.2);
+  --accent: linear-gradient(90deg, #00A94F, #76B900);
+  --muted: #3e4a41;
+  --glass-border: rgba(180, 200, 180, 0.3);
+  color:#111;
+}
+
+body.light-mode .site-header{
+  background: linear-gradient(180deg, rgba(240, 245, 240, 0.9), transparent);
+  border-bottom: 1px solid rgba(150, 170, 150, 0.3);
+}
+
+body.light-mode .top-nav a{ color:#2a2a2a; }
+body.light-mode .top-nav a:hover{ color:#000; }
+
+body.light-mode .panel{
+  background: linear-gradient(180deg, rgba(230, 245, 235, 0.6), rgba(245, 250, 247, 0.4));
+  box-shadow: 0 8px 30px rgba(10, 15, 12, 0.08);
+  border: 1px solid rgba(150, 170, 150, 0.25);
+}
+
+body.light-mode .card,
+body.light-mode .project-card,
+body.light-mode .research-card{
+  background: linear-gradient(180deg, rgba(255,255,255,0.9), rgba(255,255,255,0.8));
+  border: 1px solid rgba(170, 190, 170, 0.35);
+}
+
+body.light-mode .btn.ghost{
+  color:#2a2a2a;
+  border-color: rgba(150, 170, 150, 0.5);
+}
+
+body.light-mode .site-footer{ color:#4a4a4a; }
