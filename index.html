@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mohammad Mahdi Khademi — Robotics & Intelligent Control</title>
+  <meta name="description" content="Mohammad Mahdi Khademi: VLM-based human–robot interaction, reinforcement learning for parallel parking, engineering projects, and life outside the lab.">
+  <meta name="theme-color" content="#e85b32">
+  <meta property="og:title" content="Mohammad Mahdi Khademi — Selected Work">
+  <meta property="og:description" content="Research notes on vision–language models, robot learning, and parallel parking, alongside my projects and life outside the lab.">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="#home" aria-label="Mohammad Mahdi Khademi, home"><span class="monogram">MK<span>.</span></span><span>Mohammad Mahdi<br>Khademi</span></a>
+    <nav aria-label="Main navigation">
+      <a href="#research">Research</a><a href="#work">Projects</a><a href="#about">Me</a><a class="nav-contact" href="#contact">Say hello <span aria-hidden="true">↗</span></a>
+    </nav>
+  </div>
+</header>
+<main id="main">
+  <section id="home" class="hero container" aria-labelledby="hero-title">
+    <div class="hero-copy">
+      <p class="eyebrow">Personal notebook / Robotics &amp; life</p>
+      <h1 id="hero-title">Mohammad<br><span>Mahdi Khademi<span class="name-dot">.</span></span></h1>
+      <div class="hero-bottom"><p class="intro">I work on robots that understand people and learn to move. Here’s what I’m investigating, what I’ve built, and a little about me.</p>
+      <div class="actions"><a class="text-link" href="#research">My research ↓</a><a class="text-link" href="MohammadMahdiKhademi_CV.pdf">CV ↗</a></div></div>
+    </div>
+    <div class="workbench">
+      <p class="margin-note">On my desk<br>RoArm M3 Pro / Webots</p>
+      <figure class="hero-figure"><a href="#roarm" aria-label="Explore the RoArm simulation project"><img src="assets/roarm.webp" alt="RoArm-M3-Pro desktop robotic arm in a Webots simulation" width="1200" height="800" fetchpriority="high"></a><figcaption>Fig. 01 — A simulated workspace for experiments in robot motion.</figcaption></figure>
+      <div class="desk-notes"><span class="note-mark" aria-hidden="true">↳</span><p>Two questions I keep coming back to:</p><a href="#vlm">How can a robot understand a request?</a><a href="#rl">When should it learn, and when should it follow a model?</a></div>
+    </div>
+  </section>
+
+  <section id="research" class="container section research" aria-labelledby="research-title">
+    <div class="section-heading"><div><p class="eyebrow">01 / In progress</p><h2 id="research-title">Two lines of research.</h2></div><p>At the Robotic &amp; Artificial Intelligence Lab (RAIZ), supervised by Dr. Seyed Hassan Zabihifar.</p></div>
+    <article id="vlm" class="research-entry">
+      <div class="research-index"><span>01.A</span><p>Vision–language models<br>Human–robot interaction</p><span class="status">Ongoing · since May 2026</span></div>
+      <div class="research-body"><h3>“Pick that up.<br>Give it to them.”</h3><p class="research-lead">Turning a spoken request into an object handover with the RoArm M3 Pro.</p><p>I’m developing a framework that combines voice input with a vision–language model (VLM). The goal is for the arm to understand the request, locate the intended object, work out how to grasp it, and deliver it to a specified person.</p><p>The interaction is speaker-aware: who is speaking, what they are referring to, and who should receive the object all matter. I’m implementing and evaluating this connection between language, visual understanding, and physical action.</p>
+      <ol class="pipeline" aria-label="Intended human-robot interaction workflow"><li><span>01</span>Listen</li><li><span>02</span>Locate</li><li><span>03</span>Grasp</li><li><span>04</span>Deliver</li></ol><p class="figure-caption">Intended workflow · RoArm M3 Pro, 5+1 DOF</p></div>
+    </article>
+    <article id="rl" class="research-entry">
+      <div class="research-index"><span>01.B</span><p>Reinforcement learning<br>Parallel parking</p><span class="status">Ongoing investigation</span></div>
+      <div class="research-body"><h3>Where does learning<br>improve a classical model?</h3><p class="research-lead">Parallel parking as a test case for classical control, hybrid approaches, and pure reinforcement learning.</p><p>I’m investigating how RL can improve model-based parking, and when a learned policy should handle the maneuver directly. The comparison is between a classical approach, a hybrid that combines the model with RL, and pure RL execution.</p>
+      <div class="comparison" aria-label="Parking approaches under investigation"><div><span>A</span><h4>Classical</h4><p>A model defines the maneuver.</p></div><div><span>B</span><h4>Hybrid</h4><p>RL improves a model-based approach.</p></div><div><span>C</span><h4>Pure RL</h4><p>A learned policy executes the maneuver.</p></div></div>
+      <div class="research-footnote"><strong>Work this builds on / March 2024–May 2026</strong><p>I developed a deep RL framework for tangent-based parallel parking, validated it in Webots, and deployed the learned policy on an NVIDIA JetRacer using ultrasonic perception.</p></div></div>
+    </article>
+  </section>
+
+  <section id="work" class="container section" aria-labelledby="work-title">
+    <div class="section-heading"><div><p class="eyebrow">02 / Project archive</p><h2 id="work-title">Things I’ve built.</h2></div><p>A selection of simulations and engineering projects, with source code and project images.</p></div>
+    <article id="roarm" class="project featured-project">
+      <a class="project-image" href="assets/roarm.webp" target="_blank" rel="noopener" aria-label="Open full RoArm simulation image"><img src="assets/roarm.webp" alt="Webots scene showing the RoArm-M3-Pro articulated arm and gripper" width="1200" height="800" loading="lazy"><span class="image-label">Webots simulation <span aria-hidden="true">↗</span></span></a>
+      <div class="project-copy"><p class="eyebrow">01 / Robot modeling & control</p><h3>A desktop arm,<br>a testbed for motion.</h3><p class="project-name">Waveshare RoArm-M3-Pro</p><p>A simulation environment for exploring how a 5+1 DOF arm moves—from individual joints to end-effector paths.</p><dl><div><dt>The work</dt><dd>Kinematic modeling, joint limits, and Python controllers for positioning and trajectory following.</dd></div><div><dt>Explore the repository</dt><dd>Webots worlds, a URDF model, control examples, and screenshots of joint and object-scanning interfaces.</dd></div></dl><p class="tags">Webots <span>Python</span> URDF</p><a class="text-link" href="https://github.com/Mohammad-Mahdi-Khademi/RoArm-M3-Pro-Simulation" target="_blank" rel="noopener">View project & code <span aria-hidden="true">↗</span></a></div>
+    </article>
+    <div class="project-grid">
+      <article class="project">
+        <a class="project-image" href="assets/abb.webp" target="_blank" rel="noopener" aria-label="Open full ABB robot simulation image"><img src="assets/abb.webp" alt="ABB IRB 4600 industrial arm modeled in Webots" width="1200" height="800" loading="lazy"><span class="image-label">Robot simulation <span aria-hidden="true">↗</span></span></a>
+        <div class="project-copy"><p class="eyebrow">02 / Trajectory planning</p><h3>From joint angles to tool paths.</h3><p class="project-name">ABB IRB 4600 · 6 DOF</p><p>A Webots model of an industrial manipulator with Python control of joints and the tool center point. Circle, square, rectangle, and imitation modes make motion planning visible.</p><p class="tags">Webots <span>Python</span> Kinematics</p><a class="text-link" href="https://github.com/Mohammad-Mahdi-Khademi/6DOF-Robot-Arm-Simulation-IRB-4600-40-" target="_blank" rel="noopener">View code & motion demos <span aria-hidden="true">↗</span></a></div>
+      </article>
+      <article class="project">
+        <a class="project-image light-image" href="assets/rotopod.webp" target="_blank" rel="noopener" aria-label="Open full Rotopod CAD image"><img src="assets/rotopod.webp" alt="SolidWorks CAD model of the Rotopod parallel manipulator" width="1200" height="800" loading="lazy"><span class="image-label">Mechanical design <span aria-hidden="true">↗</span></span></a>
+        <div class="project-copy"><p class="eyebrow">03 / Parallel robotics</p><h3>One platform. Six degrees of freedom.</h3><p class="project-name">Rotopod R-3000</p><p>Connecting CAD geometry to motion: a parallel manipulator modeled in SolidWorks, simulated in CoppeliaSim, and studied with a MATLAB inverse-kinematics solver.</p><p class="tags">SolidWorks <span>CoppeliaSim</span> MATLAB</p><a class="text-link" href="https://github.com/Mohammad-Mahdi-Khademi/Rotopod-R3000-6DOF-Parallel-Manipulator" target="_blank" rel="noopener">View models & analysis <span aria-hidden="true">↗</span></a></div>
+      </article>
+      <article class="project">
+        <a class="project-image" href="assets/lane.webp" target="_blank" rel="noopener" aria-label="Open full lane detection output"><img src="assets/lane.webp" alt="Lane detection project output showing detected road boundaries" width="1200" height="800" loading="lazy"><span class="image-label">Computer vision output <span aria-hidden="true">↗</span></span></a>
+        <div class="project-copy"><p class="eyebrow">04 / Perception</p><h3>Making road images useful.</h3><p class="project-name">License plate & lane detection</p><p>A vehicle-perception project combining Persian plate recognition with lane detection. CNN classification, YOLO detection, and OpenCV processing come together in a PyQt interface.</p><p class="tags">OpenCV <span>TensorFlow</span> YOLO</p><a class="text-link" href="https://github.com/Mohammad-Mahdi-Khademi/License-Plate-and-Lane-Detection" target="_blank" rel="noopener">View pipeline & examples <span aria-hidden="true">↗</span></a></div>
+      </article>
+      <article class="project">
+        <a class="project-image light-image" href="assets/lift.webp" target="_blank" rel="noopener" aria-label="Open full industrial lift table project image"><img src="assets/lift.webp" alt="Industrial lift table project design and simulation image" width="1200" height="800" loading="lazy"><span class="image-label">Engineering design <span aria-hidden="true">↗</span></span></a>
+        <div class="project-copy"><p class="eyebrow">05 / Mechanical design</p><h3>Designing around loads and motion.</h3><p class="project-name">Adjustable industrial lift table</p><p>Shaft fatigue analysis, spring sizing, and table design linked through MATLAB calculations, SolidWorks models, and ADAMS simulation to study the mechanism under load.</p><p class="tags">MATLAB <span>SolidWorks</span> ADAMS</p><a class="text-link" href="https://github.com/Mohammad-Mahdi-Khademi/Design-Of-An-Industrial-Table" target="_blank" rel="noopener">View design & calculations <span aria-hidden="true">↗</span></a></div>
+      </article>
+    </div>
+    <div class="work-footer"><a class="text-link" href="https://github.com/Mohammad-Mahdi-Khademi?tab=repositories" target="_blank" rel="noopener">All GitHub projects <span aria-hidden="true">↗</span></a></div>
+  </section>
+
+  <section id="about" class="container section about" aria-labelledby="about-title">
+    <div class="about-heading"><p class="eyebrow">03 / Me</p><h2 id="about-title">Away from<br>the robot.</h2><figure class="portrait"><img src="MohammadMahdiKhademi_pic.jpg" alt="Mohammad Mahdi Khademi" width="400" height="480" loading="lazy"><figcaption>Mahdi / Tehran, Iran</figcaption></figure></div>
+    <div class="personal-notes"><p class="personal-intro">There’s a person behind the simulations.</p><p>I studied Mechanical Engineering at Iran University of Science and Technology. Research is a big part of my life, but so are stories, time outdoors, and a good competitive game.</p>
+      <div class="life-note"><span>01</span><div><h3>Books &amp; cinema</h3><p>I enjoy novels and the different ways they let me see people and the world. I’m also interested in acting and cinema; performing in school theater is where that interest began.</p></div></div>
+      <div class="life-note"><span>02</span><div><h3>Getting outside</h3><p>Camping, hiking, and spending time in nature help me slow down. Forests, mountains, or desert landscapes—I enjoy stepping away from a screen for a while.</p></div></div>
+      <div class="life-note"><span>03</span><div><h3>A competitive streak</h3><p>I like competitive shooter games: the concentration, the strategy, and the decisions that have to happen in a split second.</p></div></div>
+      <div class="life-note goals"><span>↗</span><div><h3>What I’m working toward</h3><p>I want to keep exploring how robots can understand people and learn useful behavior. Outside research, I’d like to start a YouTube channel to share my interests in technology, gaming, and everyday life.</p></div></div>
+    </div>
+  </section>
+  <section id="contact" class="container contact" aria-labelledby="contact-title"><div><p class="eyebrow">04 / Contact</p><h2 id="contact-title">Have something<br>in mind?</h2><p>I welcome conversations about robotics, intelligent control, and research opportunities.</p></div><div class="contact-links"><a class="button" href="mailto:mohammadmahdikhademi1@gmail.com">Get in touch <span aria-hidden="true">↗</span></a><a class="email" href="mailto:mohammadmahdikhademi1@gmail.com">mohammadmahdikhademi1@gmail.com</a><div><a href="https://github.com/Mohammad-Mahdi-Khademi" target="_blank" rel="noopener">GitHub ↗</a><a href="https://www.linkedin.com/in/mohammadmahdikhademi" target="_blank" rel="noopener">LinkedIn ↗</a></div></div></section>
+</main>
+<footer class="container site-footer"><p>© <span id="year">2026</span> Mohammad Mahdi Khademi</p><a href="#home">Back to top ↑</a></footer>
+</body>
+</html>
